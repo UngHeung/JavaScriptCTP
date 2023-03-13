@@ -14,6 +14,3 @@ function solution(before, after) {
 
     return 1;
 }
-
-console.log(solution("olleh", "hello"));
-console.log(solution("allpe", "apple"));
