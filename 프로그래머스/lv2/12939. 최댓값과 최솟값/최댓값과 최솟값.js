@@ -7,14 +7,23 @@ function checkMinAndMax(arr) {
     let min = parseInt(arr[0]);
     let max = parseInt(arr[0]);
     
-    for (i of arr) {
-        let num = parseInt(i);
+    // for (i of arr) {
+    //     let num = parseInt(i);
+    //     if (num < min) {
+    //         min = num
+    //     } else if (max < num) {
+    //         max = num
+    //     }
+    // }
+    
+    arr.forEach(element => {
+        let num = parseInt(element);
         if (num < min) {
             min = num
         } else if (max < num) {
             max = num
         }
-    }
+    })
     
     return `${min} ${max}`
 }
