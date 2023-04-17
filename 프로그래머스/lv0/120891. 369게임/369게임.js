@@ -1,4 +1,3 @@
 function solution(order) {
-    let answer = String(order).split(/[369]/g).length-1;
-    return answer;
+    return (order.toString().match(/[369]/g)??[]).length;
 }
