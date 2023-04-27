@@ -1,8 +1,7 @@
 function solution(n) {
     var answer = count1(n);
     while (true) {
-        n++;
-        if (count1(n) === answer) {
+        if (count1(++n) === answer) {
             answer = n;
             break;
         }
