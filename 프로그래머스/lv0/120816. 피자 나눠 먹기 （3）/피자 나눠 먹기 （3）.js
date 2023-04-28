@@ -1,4 +1,3 @@
-function solution(slice, n) {
-    return Math.floor(n / slice) + (n % slice ? 1 : 0)
-    
+function solution(slice, n) {  
+    return Math.ceil(n / slice)
 }
