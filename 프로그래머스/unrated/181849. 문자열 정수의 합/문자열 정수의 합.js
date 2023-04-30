@@ -1,0 +1,1 @@
+const solution=(num_str)=>{return Array.from(num_str).reduce((a,b)=>a+parseInt(b),0)}
