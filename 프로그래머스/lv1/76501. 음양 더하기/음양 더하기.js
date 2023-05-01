@@ -1,0 +1,1 @@
+const solution=(abs,s,i=0)=>abs.map(e=>!s[i++]?e*-1:e).reduce((a,b)=>a+b)
