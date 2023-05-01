@@ -1,0 +1,1 @@
+const solution=(n)=>Array.from(n+'').map(e=>e-'').sort((a,b)=>b-a).join('')-''
