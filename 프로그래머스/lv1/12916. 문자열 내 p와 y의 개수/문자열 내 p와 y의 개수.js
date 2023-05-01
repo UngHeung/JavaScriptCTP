@@ -1,0 +1,1 @@
+const solution=(s,p=0,y=0)=>{[...s.toLowerCase()].map(v=>v==='p'?p++:v==='y'?y++:0);return p===y?true:false}
