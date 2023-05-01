@@ -1,0 +1,1 @@
+const solution=(arr,div)=>{arr=arr.filter(e=>!(e%div)).sort((a,b)=>a-b);return arr.length?arr:[-1]}
