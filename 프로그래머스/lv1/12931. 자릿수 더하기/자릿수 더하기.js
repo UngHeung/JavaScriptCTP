@@ -1,1 +1,1 @@
-const solution=(n)=>[...n+''].reduce((a,b)=>a+Number(b),0)
+const solution=(n)=>[...n+''].reduce((a,b)=>a+b*1,0)
