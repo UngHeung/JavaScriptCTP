@@ -2,5 +2,6 @@
 
 const solution = (arr) => {
     if (arr.length===1) return [-1] 
-    return arr.filter(e => e !== Math.min(...arr))
+    arr.splice(arr.indexOf(Math.min(...arr)),1)
+    return arr
 }
