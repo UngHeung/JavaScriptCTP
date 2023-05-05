@@ -1,31 +1,21 @@
 function solution(brown, yellow) {
     let size = brown + yellow
-    let yHeight = 1;
     let yWidth = yellow;
-    let result = [];
     
+    return lenCheck(size, yWidth, yHeight = 1);
+}
+
+function lenCheck(size, yWidth, yHeight) {
+    let yellow = yWidth;
     while (yHeight <= yWidth) {
         yWidth = yellow / yHeight;
+        const bWidth = yWidth + 2;
+        const bHeight = yHeight + 2;
         
-        if ((yWidth + 2) * (yHeight + 2) === size) {
-            result = [yWidth + 2, yHeight+ 2]
-            break;
+        if (bWidth * bHeight === size) {
+            return [bWidth, bHeight];
         }
         
         yHeight++;
     }
-    
-    return result;
 }
-
-
-
-// 가로 >= 세로
-// brown의 가로, 세로 길이가 yellow보다 2씩 큰 경우를 구한다.
-
-/*
-    가로 = yellow / 2 부터 ++
-    세로 = yellow / 가로
-    yellow 가로 + 2 === brown 가로 + 2 && yellow 세로 + 2 === brown 세로
-    return brown [가로, 세로]
-*/
