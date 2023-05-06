@@ -1,26 +1,8 @@
-function solution(babbling) {
-    let count = 0;
-    for (const value of babbling) {
-        if (isPossible(value)) {
-            count++
-        }
-    }
-    return count
-}
+// /^(aya|ye|woo|ma)+$/
 
-function isPossible(value) {
-    const words = ['aya', 'ye', 'woo', 'ma']
-    let len = value.length
-    
-    for (const word of words) {
-        if (value.match(word)) {
-            len -= word.length
-        }
-        
-        if (!(len)) {
-            return true
-        }
-    }
-    
-    return false
+const solution=(b)=>{
+    const r = /^(aya|ye|woo|ma)+$/
+    let cnt = 0
+    b.forEach(w=>r.test(w)?cnt++:0)
+    return cnt
 }
