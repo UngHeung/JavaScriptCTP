@@ -1,14 +1,22 @@
 function solution(numer1, denom1, numer2, denom2) {
-    let num = numer1 * denom2 + numer2 * denom1
-    let den = denom1 * denom2
+    let numer = numer1*denom2 + numer2*denom1;
+    let denom = denom1*denom2;
+    let num = 0;
+
+    let max = Math.max(numer, denom)
+    let min = Math.min(numer, denom)
+    let n = 0
+    let temp = 0
     
-    let a = Math.min(den, num);
-    while(a>0) {
-        if (num%a===0 && den%a===0) {
-            return [num/a, den/a]
+    while (true) {
+        if (max % min === 0) {
+            n = min
+            return [numer / n, denom / n]
         }
-        a--
+        
+        
+        [max, min] = [min, max % min]
     }
     
-    return [num, den]
+    return [numer, denom]
 }
