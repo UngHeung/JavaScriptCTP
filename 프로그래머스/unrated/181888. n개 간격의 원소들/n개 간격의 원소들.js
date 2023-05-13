@@ -1,7 +1,1 @@
-function solution(num_list, n) {
-    const res = []
-    for (let i = 0; i < num_list.length; i+=n) {
-        res.push(num_list[i])
-    }
-    return res
-}
+const solution=(l,n)=>l.filter((e,i)=>!(i%n)&&e+n)
