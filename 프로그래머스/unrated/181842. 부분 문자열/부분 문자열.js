@@ -1,0 +1,1 @@
+const solution=(s1,s2)=>s2.includes(s1)?1:0
