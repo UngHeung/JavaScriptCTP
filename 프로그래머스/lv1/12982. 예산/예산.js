@@ -5,5 +5,5 @@ function solution(d, budget) {
             answer = i
         }
         return a + b
-    })>budget?answer:answer+1
+    })>budget ? answer : answer + 1
 }
