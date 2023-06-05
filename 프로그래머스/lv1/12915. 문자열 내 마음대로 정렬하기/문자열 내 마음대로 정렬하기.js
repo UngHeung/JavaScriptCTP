@@ -13,7 +13,11 @@ function solution (strings, n) {
 
 function isSort(str1, str2, n) {
     if (str1.charAt(n) === str2.charAt(n)) {
-        return [str1, str2].sort()
+        n = 0
+        
+        while(str1.charAt(n) === str2.charAt(n)) {
+            n++
+        }
     }
     
     let ln = str1.charAt(n).charCodeAt()
